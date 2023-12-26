@@ -106,8 +106,7 @@ on = True
 select_prompt = "What would you like? "
 while on:
     intro()
-    choice = validator(select_list, select_prompt)
-    if choice == "report":
+    if (choice := validator(select_list, select_prompt)) == "report":
         report(earnings)
     elif choice == "off":
         on = False
